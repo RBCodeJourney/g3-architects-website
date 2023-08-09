@@ -3,6 +3,13 @@
 
 /* shared styles */
 
+* {
+  font-family: "Lato", sans-serif;
+  font-family: "Work Sans", sans-serif;
+}
+.text-light-gray {
+  color: #727272;
+}
 .btn-primary {
   border-radius: 8px;
   color: #fff;
@@ -14,10 +21,6 @@
   cursor: pointer;
 }
 
-* {
-  font-family: "Lato", sans-serif;
-  font-family: "Work Sans", sans-serif;
-}
 /* header styles  */
 header {
   background-color: rgba(255, 144, 14, 0.1);
@@ -61,13 +64,38 @@ nav li a {
   font-weight: 400;
   color: #131313;
 }
-.banner-description {
-  color: #727272;
-}
 
 .banner img {
   margin: 25px;
   width: 100%;
+}
+
+/* main styles */
+main {
+  max-width: 1440px;
+  margin: 70px auto;
+}
+
+/* teams styles */
+.teams-container {
+  display: flex;
+  align-items: center;
+}
+.teams-img-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.teams-content {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+.teams-title {
+  font-size: 2.8rem;
+}
+.teams-title .text-features {
+  color: #ff900e;
+  font-weight: 700;
 }
 
 /* responsive media queries */
@@ -77,50 +105,27 @@ nav li a {
   header {
     padding: 20px;
   }
-  nav {
+  nav,
+  .teams-container {
     flex-direction: column;
+  }
+
+  .teams-img-container {
+    grid-template-columns: 1fr;
+  }
+  .teams-container {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
 /* tablet or medium devices */
 @media screen and (min-width: 576px) and (max-width: 960px) {
-  nav {
+  nav,
+  .teams-container {
     flex-direction: column;
   }
   header {
     padding: 50px;
   }
-}
-
-
-/* main styles */
-main{
-    max-width: 1440px;
-    margin: 0 auto;
-}
-
-/* teams styles */
-.teams-container{
-    display: flex;
-    align-items: center;
-}
-.teams-img-container{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 1.5rem;
-}
-.teams-content{
-    padding-left: 70px;
-    padding-right: 70px;
-}
-.teams-title{
-    font-size: 2.8rem;
-}
-.teams-title .quick-list{
-    color: #727272;
-  font-weight: 500;  
-}
-.teams-title .text-features{
-    color: #ff900e;
-    font-weight: 700;
 }
